@@ -7,7 +7,15 @@
     <body>
         <div id="contenedor" ></div>
         <script type="text/jsx"> 
-            // Aquí el código react
+            //Crea una clase MiEtiqueta
+
+            var  MiEtiqueta = React.createClass({
+                render: function(){
+                    return(<p>Hola mundo</p>);
+                }
+            });
+
+            React.render(<MiEtiqueta />, document.getElementById('contenedor'));
         </script>
     </body>
 </html>

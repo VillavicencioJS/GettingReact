@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <script src="build/react.js"></script>
         <script src="build/JSXTransformer.js"></script>
     </head>
     <body>
         <div id="contenedor" ></div>
-        <script type="text/jsx"> 
-            // Aquí el código react
+        <script type="text/jsx">
+        
+            
+            var  Equipo = React.createClass({
+                render: function(){
+                    return(
+                        <div className="Equipo">
+                            <h1>Selección Nacional de {this.props.pais}</h1>
+                            <Jugadores />
+                        </div>
+                    );
+                }
+            });
+            
+            
+            var  Jugadores = React.createClass({
+                render: function(){
+                    return (
+                        <ul>
+                            <li>David Ospina</li>
+                            <li>Juan Cuadrado</li>
+                            <li>James Rodriguez</li>
+                        </ul>
+                    );
+                }
+            });
+            
+            React.render(<Equipo pais='Colombia' />, document.getElementById('contenedor'));
         </script>
     </body>
 </html>

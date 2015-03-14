@@ -7,15 +7,15 @@
     <body>
         <div id="contenedor" ></div>
         <script type="text/jsx"> 
-            //Crea una clase MiEtiqueta
-
             var  MiEtiqueta = React.createClass({
                 render: function(){
-                    return(<p>Hola mundo</p>);
+                    //muestra el valor del parámetro mensaje que llega.
+                    return(<p>{this.props.mensaje}</p>);
                 }
             });
 
-            React.render(<MiEtiqueta />, document.getElementById('contenedor'));
+            //Envía el parámetro mensaje con el valor de "hola mundo"
+            React.render(<MiEtiqueta mensaje='hola mundo' />, document.getElementById('contenedor'));
         </script>
     </body>
 </html>
